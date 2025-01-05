@@ -13,10 +13,13 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - name: Style
+      - name: Set up Go
         uses: actions/setup-go@v5
         with:
           go-version: "1.23.0"
+
+      - name: Style
+        run: test -z $(go fmt ./...)
 
       - name: Run all Tests
         run: go test  -cover ./...
