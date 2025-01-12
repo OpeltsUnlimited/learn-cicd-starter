@@ -1,5 +1,7 @@
 package main
 
+// gcloud builds submit --tag europe-west10-docker.pkg.dev/notely-447614/notely-ar-repo/notely:latest
+
 import (
 	"database/sql"
 	"embed"
